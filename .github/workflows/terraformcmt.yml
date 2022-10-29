@@ -62,7 +62,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -output workspace.plan
+        run: terraform plan 
 
       - name: Post Plan
         if: always() && github.ref != 'refs/heads/main' && (steps.plan.outcome == 'success' || steps.plan.outcome == 'failure')
